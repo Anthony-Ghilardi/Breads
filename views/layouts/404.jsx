@@ -6,7 +6,7 @@ function NotFound () {
         <Default>
             <h3>Bread not found!</h3>
             <p>
-                <a href="http://localhost:3003/breads/1">Return to home page</a>
+                <a href="http://localhost:3003/breads/">Return to home page</a>
             </p>
         </Default>
     )
