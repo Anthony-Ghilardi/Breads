@@ -19,7 +19,7 @@ breads.get('/:arrayIndex', (req, res) => {
       bread: Bread[req.params.arrayIndex]
     })
   } else {
-    res.status(404).render('../views/layouts/404.jsx')
+    res.render('../views/layouts/404.jsx')
   }
 })
 
