@@ -12,12 +12,13 @@ function Show ({bread, index}) {
             and it
             {
                 bread.hasGluten
-                ? <span>does</span>
-                : <span>does NOT</span>
+                ? <span> does </span>
+                : <span> does NOT </span>
             }
             have gluten.
         </p>
         <img src={bread.image} alt={bread.name}></img>
+        <p>Baked by {bread.baker}</p>
         <li><a href="/breads">Go home</a></li>
         <form action={`/breads/${bread.id}?_method=DELETE`} method="POST">
           <input type='submit' value="DELETE"/>
