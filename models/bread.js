@@ -14,10 +14,15 @@ const breadSchema = new Schema({
     }
 })
 
-// Helper methods
-breadSchema.methods.getBakedBy = function() {
-    return `${this.name} was baked with love by ${this.baker}`
-}
+// helper methods 
+breadSchema.methods.getBakedBy = function(){
+    //handle if baker exists
+    if (this.baker !== undefined){
+        return `${this.name} was baked with love by ${this.baker.name}, who has been with us since ${this.baker.startDate.getFullYear()}`
+    }
+    else return ""
+  }
+  
 
 // model and export 
 const Bread = mongoose.model('Bread', breadSchema)
