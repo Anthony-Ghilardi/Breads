@@ -18,6 +18,17 @@ function Index({breads, bakers, title}) {
         }
       </ul>
       <h3>Breads</h3>
+        <ul>
+          {
+            breads.map((bread) => {
+              return (
+                <li key={bread.id}>
+                  <a href= {`/breads/${bread.id}`}>{bread.name}</a>
+                </li>
+              )
+            })
+          }
+        </ul>
       <div className="newButton">
           <a href="/breads/new"><button>Add a new bread</button></a>
       </div>
